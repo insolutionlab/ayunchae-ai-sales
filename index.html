@@ -62,6 +62,13 @@ main{padding:6px 0 30px}
 .kind{font-size:11.5px;font-weight:800;letter-spacing:.06em;color:var(--cobalt);background:var(--tint);padding:4px 10px;border-radius:999px;white-space:nowrap}
 .kind.prompt{background:var(--cobalt);color:var(--white)}
 .kind.md{background:var(--green);color:var(--white)}
+.kind.pack{background:var(--cobalt);color:var(--white)}
+.pack{display:grid;gap:18px;margin-top:12px}
+.pack .sub{border-top:1px solid var(--pline);padding-top:16px}
+.pack .sub:first-child{border-top:0;padding-top:4px}
+.pack h4{font-size:16px;font-weight:700;line-height:1.45;letter-spacing:-.01em;margin-bottom:8px;color:var(--ink)}
+.pack h4 .no{color:var(--cobalt);font-weight:800;margin-right:8px}
+.pack h4 .ed{display:inline-block;margin-left:8px;font-size:12px;font-weight:700;color:var(--sub);background:var(--tint);border-radius:999px;padding:2px 9px;vertical-align:2px}
 .tool{font-size:13.5px;color:var(--sub)}
 .tool b{color:var(--ink);font-weight:700}
 .card h3{font-size:17px;font-weight:700;line-height:1.4;letter-spacing:-.01em;margin-bottom:10px}
@@ -143,6 +150,8 @@ details.note p{margin-top:4px;font-size:14.5px;color:var(--body);line-height:1.6
   body{background:#fff}
   .top{border-bottom:1px solid #999}
   .card,ol.steps li,table tr{break-inside:avoid;page-break-inside:avoid}
+  .card.packcard{break-inside:auto;page-break-inside:auto}
+  .pack .sub{break-inside:avoid;page-break-inside:avoid}
   .card{box-shadow:none;border-color:#bbb}
   pre.pbox{border-color:#bbb;background:#fff}
   details.note{border-top-color:#bbb}
@@ -475,6 +484,67 @@ details.note p{margin-top:4px;font-size:14.5px;color:var(--body);line-height:1.6
         "note": ""
       },
       {
+        "kind": "pack",
+        "title": "Gen AI 도구 활용력을 200% 높여주는 영업 전문가의 요청문 모음",
+        "fold": true,
+        "open": false,
+        "items": [
+          {
+            "title": "반복 업무를 단계별로 나누는 요청문",
+            "body": "당신은 현장 영업 업무 분석을 돕는 조력자입니다. 제시한 나의 업무를 다섯 단계로 나누어 주십시오.\n단계마다 수행 내용, 주당 반복 횟수, 대략적인 소요 시간, 그 단계를 시작하기 전에 필요한 정보를 표로 정리해 주십시오.\n시간이 가장 많이 드는 단계와 자동화 검토 후보를 구분하고, 판단 근거를 함께 적어 주십시오.\n\n업무 내용: [개인 업무 리스트]"
+          },
+          {
+            "title": "미용실 밀집도와 개업·폐업 동향 분석 요청문",
+            "body": "[담당 상권과 기준 지점] 반경 10km의 미용실 밀집도와 최근 개업·폐업 동향을 검색해 주십시오.\n기준일과 반경을 먼저 밝히고, 공개 자료에서 확인 가능한 수치마다 출처명·게시일·링크를 제시해 주십시오.\n소상공인시장진흥공단 상권정보와 지방행정 인허가 미용업 개폐업 자료 등 공개 출처를 우선 확인해 주십시오.\n확인된 사실과 추정을 구분하고, 공개 자료로 확인되지 않는 항목은 미확인으로 표시해 주십시오."
+          },
+          {
+            "title": "살롱의 공개 정보와 운영 관심사에 대한 가설 검증 요청문",
+            "body": "[방문 예정 살롱명]의 공개된 네이버 플레이스, 공식 홈페이지, 공식 인스타그램 정보를 정리해 주십시오. 각 정보의 출처 링크와 확인일을 적고, 공개된 사업 정보에서 읽을 수 있는 운영 관심사를 근거와 함께 세 가지 가설로 제시해 주십시오.\n가설마다 근거가 된 공개 정보와 방문 때 확인할 질문을 붙여 주십시오. 확인되지 않은 사실이나 개인 정보를 추정하지 말고, 근거가 부족한 항목은 판단을 보류해 주십시오."
+          },
+          {
+            "title": "방문 전 브리핑 카드 작성 요청문",
+            "body": "아래에 붙인 상권 검색 결과와 살롱의 공개 사업 정보를 방문 전 브리핑 카드 한 장에 정리해 주십시오. 확인된 사실, 출처 링크, 운영 관심사 가설, 방문 때 확인할 질문을 구분해 주십시오. 출처가 없는 주장과 확인되지 않은 수치는 제외하고, 카드 끝에 추가 확인이 필요한 항목을 표시해 주십시오.\n자료: [확인한 검색 결과와 공개 사업 정보]"
+          },
+          {
+            "title": "4W를 반영한 현장 보고 초안 작성용 요청문",
+            "body": "당신은 아윤채 제품을 다루는 살롱 영업 담당자의 보고서 작성을 돕는 조력자입니다. 아래 방문 메모를 바탕으로 담당자 보고 초안을 작성해 주십시오.\n방문 목적, 확인된 살롱 현황, 원장님 요청사항, 미결 사항, 다음 조치를 구분하고, 사실과 담당자의 추정을 표시해 주십시오.\n결과는 제목과 항목형 본문으로 구성하고, 확인이 필요한 정보는 별도 표시해 주십시오.\n방문 메모: [실제 방문 기록한 메모]"
+          },
+          {
+            "title": "수정 조건과 검증 기준 추가 요청문",
+            "body": "① 현장 안내문 점검: [OO 안내문]에서 사실 오류·누락·표현 문제를 항목별로 점검하고 근거를 적어 주십시오.\n② 긴 자료 요약: [긴 자료]를 핵심 내용·근거·미결 사항 중심으로 요약해 주십시오.\n③ 수정 재요청: [수정 조건]을 반영해 요약문을 고쳐 주십시오.\n④ 담당자 검증표: 수정본의 수치·출처·요청 조건·누락 여부를 점검하고, 확인할 수 없는 항목은 미확인으로 표시해 주십시오."
+          },
+          {
+            "title": "업로드 자료 기반 핵심 분석 요청문",
+            "body": "업로드한 자료만을 기반으로 답변해 주세요. 외부 정보나 추측은 절대 사용하지 마십시오.\n① 핵심 내용 5가지 ② 중요 시사점 5가지 ③ 우리 OO이 반드시 알아야 할 내용\n④ 즉시 실행 가능한 과제 ⑤ 향후 검토가 필요한 내용\n작성 기준: OO장 보고 수준, 핵심 문장 중심 중복 제거, 수치와 근거 우선, 객관적 표현\n마지막에 별도 작성: 3줄 요약, 최고 의사결정권자 브리핑, 실무자 액션아이템"
+          },
+          {
+            "title": "강사 제공 상담 음성 요약 요청문",
+            "body": "녹음 활용 동의와 회사 승인이 확인된 강사 제공 원장님 상담 음성이나 함께 등록한 자료를 바탕으로 상담 내용을 요약해 주십시오.\n확인된 원장님 요구사항과 아직 확인되지 않은 사항을 각각 정리하고, 다음 방문 전에 확인할 항목을 표시해 주십시오.\n음성이나 함께 등록한 자료에서 확인할 수 없는 내용은 추정하지 마십시오.",
+            "title_note": "원문에 제목이 없어 본문 내용으로 붙인 제목"
+          },
+          {
+            "title": "상담 음성 요약 및 다음 영업을 위한 전략적 활용 요청문",
+            "body": "녹음 활용 동의와 회사 승인이 확인된 원장님 상담 음성이나 함께 등록한 자료를 바탕으로 상담 내용을 요약해 주십시오.\n확인된 원장님 요구사항과 아직 확인되지 않은 사항을 각각 정리하고, 다음 방문 전에 확인할 항목을 표시해 주십시오.\n음성이나 함께 등록한 자료에서 확인할 수 없는 내용은 추정하지 마십시오."
+          },
+          {
+            "title": "미확인 사항과 다음 대화 주제 상담 기록에 근거한 재방문 대화 주제 선정 요청문",
+            "body": "OO 상담 내용에서 확인되지 않은 사항과 다음 방문에서 꺼낼 대화 주제를 최대 다섯 가지로 정리해 주십시오. 각 주제에 상담 기록에서 확인한 근거를 붙이고, 다음 방문에서 자연스럽게 확인할 질문으로 작성해 주십시오. 기록에 없는 내용은 추정하지 말고 확인 필요로 표시해 주십시오."
+          },
+          {
+            "title": "자료에 근거한 제품 구성 검토 살롱 조건과 제품 자료의 대조 요청문",
+            "body": "회사 기준과 승인 절차를 확인한 아윤채 제품 자료만 근거로 삼아 아래 OO 살롱 조건에 맞는 제품 추천을 위한 구성 검토 초안을 작성해 주십시오.\n각 검토 항목에 근거가 된 자료명과 내용을 연결하고, 자료에서 확인되지 않는 효능·성분·사용 조건은 추가하지 마십시오.\n근거가 부족한 항목은 확인할 자료를 질문으로 제시해 주십시오. 살롱 조건: [OO 조건]"
+          },
+          {
+            "title": "담당 살롱의 주간 방문 계획 수립 요청문",
+            "body": "담당 살롱 목록을 바탕으로 요일별 방문 순서와 이동 동선 초안을 작성해 주십시오.\n각 방문의 우선순위와 순서 제안 근거를 밝히고, 동 이름 수준의 위치·방문 가능 조건·운영 시간이 확인되지 않은 항목은 미확인으로 표시해 주십시오.\n결과를 검토한 뒤 담당자가 직접 수정할 수 있도록 요일별 표로 정리해 주십시오.\n\n목록: [동 이름 수준의 위치와 방문 가능 조건을 포함한 살롱 목록]"
+          },
+          {
+            "title": "재주문 시점의 안부 메시지 작성 요청문",
+            "body": "OO 살롱의 확인된 입점 후 점검 정보를 바탕으로 안부 메시지 초안을 작성해 주십시오. 재주문 시점이라고 볼 근거를 사실로 확인할 수 있을 때만 언급하고, 주문을 재촉하거나 확인되지 않은 판매 반응을 단정하지 마십시오. 짧고 정중한 인사와 안부, 필요하면 확인 질문을 포함해 주십시오.\n정보: [OO 점검 정보]"
+          }
+        ]
+      },
+      {
         "kind": "tip",
         "title": "참고문헌",
         "body": "Bsharat, S. M., Myrzakhan, A., & Shen, Z. (2024). Principled instructions are all you need for questioning LLaMA-1/2, GPT-3.5/4. arXiv.\nGoogle Workspace. (2026). Gemini Notebook for business. Google.\nGreenaway, R. (1983). Active reviewing. Bulletin, Group Relations Training Association.\n개인정보보호위원회. (2025). 생성형 인공지능(AI) 개발·활용을 위한 개인정보 처리 안내서.",
@@ -486,7 +556,7 @@ details.note p{margin-top:4px;font-size:14.5px;color:var(--body);line-height:1.6
   }
 ];
 
-  var KIND_LABEL = { prompt: "요청문", md: "양식", steps: "단계", checklist: "확인할 내용", table: "표", tip: "안내" };
+  var KIND_LABEL = { prompt: "요청문", md: "양식", steps: "단계", checklist: "확인할 내용", table: "표", tip: "안내", pack: "요청문 모음" };
 
   /* 항목 앞 아이콘 · 뜻을 닮은 꼴(깃발 · 방패 · 말풍선 · 돋보기 · 문서) */
   var ICONS = {
@@ -582,11 +652,23 @@ details.note p{margin-top:4px;font-size:14.5px;color:var(--body);line-height:1.6
     return "<pre class=\"pbox\">" + slot(esc(body.trim())) + "</pre>";
   }
 
+  function renderPack(b) {
+    var h = "<details class=\"note fold\"" + (b.open ? " open" : "") + "><summary>" + esc(b.title) + "</summary><div class=\"pack\">";
+    b.items.forEach(function (it, k) {
+      h += "<div class=\"sub\" data-i=\"" + k + "\"><h4><span class=\"no\">" + pad(k + 1) + "</span><span class=\"t\">" + esc(it.title) + "</span>" +
+           (it.title_note ? "<span class=\"ed\" title=\"" + esc(it.title_note) + "\">편집 제목 · 원문 제목 없음</span>" : "") + "</h4>" + renderPre(it.body) +
+           "<div class=\"btns\"><button type=\"button\" class=\"btn copy\" data-act=\"copy\">요청문 복사</button>" +
+           "<button type=\"button\" class=\"btn dl\" data-act=\"mdcopy\">메모용 글로 복사</button></div></div>";
+    });
+    return h + "</div></details>";
+  }
+
   function renderBlock(b, si, bi) {
-    var h = "<article class=\"card\" data-s=\"" + si + "\" data-b=\"" + bi + "\">";
+    var h = "<article class=\"card" + (b.kind === "pack" ? " packcard" : "") + "\" data-s=\"" + si + "\" data-b=\"" + bi + "\">";
     h += "<div class=\"chead\"><span class=\"kind " + b.kind + "\">" + KIND_LABEL[b.kind] + "</span>";
     if (b.tool) h += "<span class=\"tool\">도구 · <b>" + esc(b.tool) + "</b></span>";
     h += "</div>";
+    if (b.kind === "pack") return h + renderPack(b) + "</article>";
     if (b.fold) {
       var fb = b.kind === "table" ? renderTable(b.body) : b.kind === "checklist" ? renderChecklist(b.body, b.icon) : b.kind === "steps" ? renderSteps(b.body) : renderTip(b.body);
       return h + "<details class=\"note fold\"" + (b.open ? " open" : "") + "><summary>" + esc(b.title) + "</summary>" + fb + "</details></article>";
@@ -725,7 +807,11 @@ details.note p{margin-top:4px;font-size:14.5px;color:var(--body);line-height:1.6
     var d = new Date();
     var o = "# " + TITLE + "\n\n" + SUBTITLE + "\n\n작성일 " + d.getFullYear() + "년 " + (d.getMonth() + 1) + "월 " + d.getDate() + "일\n";
     SECTIONS.forEach(function (s, i) {
-      var items = s.blocks.filter(function (b) { return b.kind === "prompt" || b.kind === "md"; });
+      var items = [];
+      s.blocks.forEach(function (b) {
+        if (b.kind === "prompt" || b.kind === "md") items.push(b);
+        else if (b.kind === "pack") b.items.forEach(function (it) { items.push(it); });
+      });
       if (!items.length) return;
       o += "\n## " + s.heading + "\n";
       items.forEach(function (b) {
@@ -751,22 +837,25 @@ details.note p{margin-top:4px;font-size:14.5px;color:var(--body);line-height:1.6
       if (act === "all") { save("아윤채_영업AI_요청문_양식_전체.md", buildAll()); return; }
       var card = btn.closest(".card");
       if (!card) return;
+      var sub = btn.closest(".sub");
+      var scope = sub || card;
       if (act === "copy") {
-        var pre = card.querySelector("pre.pbox");
+        var pre = scope.querySelector("pre.pbox");
         if (!pre) return;
         var text = pre.textContent.trim();
         copyText(text).then(function () {
           markDone(btn);
           toast("복사되었습니다");
         }, function () {
-          selectPre(card);
+          selectPre(scope);
           toast("선택해 두었습니다. 길게 눌러 복사해 주십시오");
         });
       } else if (act === "mdcopy") {
         var pb = getBlock(card);
+        if (pb && sub && pb.items) pb = pb.items[parseInt(sub.getAttribute("data-i"), 10)];
         if (!pb) return;
         var md = "### " + pb.title + "\n\n" + (pb.tool ? "도구: " + pb.tool + "\n\n" : "") + "```\n" + pb.body.trim() + "\n```\n" + (pb.note ? "\n결과에서 확인할 것 · " + pb.note + "\n" : "");
-        copyText(md).then(function () { markDone(btn); toast("메모용 글로 복사되었습니다"); }, function () { selectPre(card); toast("선택해 두었습니다. 길게 눌러 복사해 주십시오"); });
+        copyText(md).then(function () { markDone(btn); toast("메모용 글로 복사되었습니다"); }, function () { selectPre(scope); toast("선택해 두었습니다. 길게 눌러 복사해 주십시오"); });
       } else if (act === "md") {
         var b = getBlock(card);
         if (!b) return;
